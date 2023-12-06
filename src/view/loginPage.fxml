@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="297.0" prefWidth="513.0" styleClass="anchor-pane" stylesheets="@loginPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.loginPageController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="287.0" prefWidth="502.0" style="-fx-border-color: black; -fx-padding: 10; -fx-border-radius: 5; -fx-border-width: 2;" />
+      <TextField fx:id="schedulerUsernameField" layoutX="161.0" layoutY="78.0" styleClass="text-field" />
+      <TextField fx:id="schedulerPasswordField" layoutX="161.0" layoutY="116.0" styleClass="text-field" />
+      <Label fx:id="loginHeader" layoutX="207.0" layoutY="12.0" styleClass="label-header" text="Login" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button fx:id="schedulerLoginButton" layoutX="306.0" layoutY="242.0" mnemonicParsing="false" text="Login" />
+      <Button fx:id="loginCloseButton" layoutX="398.0" layoutY="242.0" mnemonicParsing="false" text="Close" />
+      <Label fx:id="locationLabel" layoutX="76.0" layoutY="190.0" styleClass="label-bright" text="Location:" />
+      <Label fx:id="usernameLabel" layoutX="76.0" layoutY="80.0" prefWidth="192.0" styleClass="label-bright" text="Username:" />
+      <Label fx:id="passwordLabel" layoutX="76.0" layoutY="118.0" styleClass="label-bright" text="Password:" />
+      <TextField fx:id="schedulerLocationField" editable="false" layoutX="161.0" layoutY="187.0" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: white;" styleClass="text-field" />
+      <ImageView blendMode="HARD_LIGHT" fitHeight="102.0" fitWidth="69.0" layoutX="417.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/SchedulerIcon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

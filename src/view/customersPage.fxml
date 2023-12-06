@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="759.0" styleClass="anchor-pane" stylesheets="@customersPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customersController">
+   <children>
+      <AnchorPane layoutX="16.0" layoutY="55.0" prefHeight="552.0" prefWidth="725.0" style="-fx-border-color: black; -fx-padding: 10; -fx-border-radius: 5; -fx-border-width: 2;">
+         <children>
+            <Button fx:id="customersAddButton" layoutX="137.0" layoutY="229.0" mnemonicParsing="false" text="Add Customer" />
+            <Button fx:id="customersEditButton" layoutX="286.0" layoutY="229.0" mnemonicParsing="false" text="Customer Edit" />
+            <Button fx:id="customersRemoveButton" layoutX="431.0" layoutY="229.0" mnemonicParsing="false" text="Remove Customer" />
+            <Label layoutX="364.0" layoutY="160.0" prefHeight="28.0" prefWidth="105.0" styleClass="label-bright" text="Province (State):" />
+            <ComboBox fx:id="customersProvinceComboBox" layoutX="492.0" layoutY="153.0" prefWidth="150.0" styleClass="table-view" stylesheets="@reportsPage.css" />
+            <Label layoutX="365.0" layoutY="106.0" prefHeight="28.0" prefWidth="105.0" styleClass="label-bright" text="Country:" />
+            <TextField fx:id="customerSearchField" layoutX="221.0" layoutY="510.0" onAction="#retrieveSearchedCustomer" prefHeight="25.0" prefWidth="270.0" promptText="Search By Customer ID Or Name" styleClass="text-field" />
+            <Label layoutX="365.0" layoutY="54.0" prefHeight="28.0" prefWidth="146.0" styleClass="label-bright" text="Postal Code:" />
+         </children></AnchorPane>
+      <Label layoutX="261.0" layoutY="60.0" prefHeight="34.0" prefWidth="262.0" styleClass="label-header" text="Records For Customers" underline="true">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customersRecordTableView" layoutX="19.0" layoutY="320.0" prefHeight="227.0" prefWidth="718.0">
+        <columns>
+          <TableColumn fx:id="customerIDTableColumn" prefWidth="105.0" text="Customer ID" />
+          <TableColumn fx:id="customerNameTableColumn" prefWidth="107.0" text="Name" />
+            <TableColumn fx:id="customerAddressTableColumn" prefWidth="128.0" text="Address" />
+            <TableColumn fx:id="customerPostalCodeTableColumn" prefWidth="101.0" text="Postal Code" />
+            <TableColumn fx:id="customerPhoneTableColumn" prefWidth="68.0" text="Phone" />
+            <TableColumn fx:id="customerProvinceTableColumn" prefWidth="79.0" text="Province" />
+            <TableColumn fx:id="customerCountryTableColumn" prefWidth="193.0" text="Country" />
+        </columns>
+      </TableView>
+      <Label layoutX="41.0" layoutY="113.0" prefHeight="31.0" prefWidth="204.0" styleClass="label-bright" text="Customer's ID:" />
+      <TextField fx:id="customersIDField" editable="false" layoutX="178.0" layoutY="114.0" prefHeight="25.0" prefWidth="150.0" styleClass="text-field" />
+      <Label layoutX="41.0" layoutY="146.0" prefHeight="28.0" prefWidth="119.0" styleClass="label-bright" text="Customer's Name:" />
+      <TextField fx:id="customersNameField" layoutX="178.0" layoutY="147.0" prefHeight="26.0" prefWidth="150.0" styleClass="text-field" />
+      <Label layoutX="41.0" layoutY="183.0" prefHeight="28.0" prefWidth="131.0" styleClass="label-bright" text="Customer's Address:" />
+      <TextField fx:id="customersAddressField" layoutX="178.0" layoutY="184.0" prefHeight="26.0" prefWidth="150.0" styleClass="text-field" />
+      <TextField fx:id="customersPostalCodeField" layoutX="509.0" layoutY="113.0" prefHeight="26.0" prefWidth="150.0" styleClass="text-field" />
+      <Label layoutX="41.0" layoutY="223.0" prefHeight="28.0" prefWidth="119.0" styleClass="label-bright" text="Customer's Phone:" />
+      <TextField fx:id="customersPhoneField" layoutX="178.0" layoutY="224.0" prefHeight="26.0" prefWidth="150.0" styleClass="text-field" />
+      <ComboBox fx:id="customersCountryComboBox" layoutX="509.0" layoutY="149.0" prefWidth="150.0" styleClass="table-view" stylesheets="@reportsPage.css" />
+      <Button fx:id="customerSaveRecordButton" layoutX="547.0" layoutY="10.0" mnemonicParsing="false" text="Save To Records" />
+      <Button fx:id="customerNavigatorButton" layoutX="53.0" layoutY="10.0" mnemonicParsing="false" text="Return To Navigator" />
+      <Label layoutX="253.0" layoutY="11.0" text="Holladay Pediatric Scheduler" underline="true">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <ImageView blendMode="HARD_LIGHT" fitHeight="63.0" fitWidth="80.0" layoutX="670.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/SchedulerIcon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="392.0" styleClass="anchor-pane" stylesheets="@navigationPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="6.0" layoutY="6.0" prefHeight="391.0" prefWidth="380.0" style="-fx-border-color: black; -fx-padding: 10; -fx-border-radius: 5; -fx-border-width: 2;">
+         <children>
+            <Label layoutX="34.0" layoutY="20.0" prefHeight="39.0" prefWidth="333.0" styleClass="label-header" text="Holladay Pediatric Scheduler" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Button fx:id="navigatorCustomerButton" layoutX="102.0" layoutY="114.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="201.0" text="View Customers" />
+      <Button fx:id="navigatorAppointmentsButton" layoutX="102.0" layoutY="207.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="201.0" text="View Appointments" />
+      <Button fx:id="navigatorReportsButton" layoutX="102.0" layoutY="161.0" mnemonicParsing="false" text="View Scheduler Reports" />
+      <Button fx:id="navigatorExitSchedulerButton" layoutX="102.0" layoutY="255.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="201.0" text="Exit Scheduler" />
+      <ImageView blendMode="HARD_LIGHT" fitHeight="74.0" fitWidth="101.0" layoutX="159.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/SchedulerIcon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="119.0" layoutY="76.0" prefHeight="31.0" prefWidth="195.0" text="Navigator Page" underline="true" />
+   </children>
+</AnchorPane>

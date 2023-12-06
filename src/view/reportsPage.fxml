@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="1069.0" styleClass="anchor-pane" stylesheets="@reportsPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.reportsController">
+   <children>
+      <AnchorPane layoutX="22.0" layoutY="64.0" prefHeight="483.0" prefWidth="1031.0">
+         <children>
+            <ImageView blendMode="HARD_LIGHT" fitHeight="48.0" fitWidth="62.0" layoutX="476.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/SchedulerIcon.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <Label layoutX="372.0" layoutY="23.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="332.0" styleClass="label-header" text="Pediatric Scheduler Reports" underline="true">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="reportPageReturnButton" layoutX="52.0" layoutY="26.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="195.0" text="Return To Navigator" />
+      <TabPane layoutX="25.0" layoutY="68.0" prefHeight="396.0" prefWidth="1021.0" styleClass="table-view" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="tabTotalAppointments" onSelectionChanged="#initializeAppointmentReportTV" text="Totals For Appointments">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1d1d1d;" styleClass="button">
+                     <children>
+                        <AnchorPane layoutY="-13.0" prefHeight="344.0" prefWidth="894.0">
+                           <children>
+                              <TableView fx:id="appointmentTotalTypeTable" layoutX="551.0" layoutY="33.0" prefHeight="280.0" prefWidth="341.0">
+                                <columns>
+                                  <TableColumn fx:id="appointmentTotalType" prefWidth="182.0" text="Type Of Appointment" />
+                                  <TableColumn fx:id="appointmentTypeTotalColumn" prefWidth="156.0" text="Total Amount" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="appointmentTotalMonthTable" layoutX="75.0" layoutY="29.0" prefHeight="284.0" prefWidth="457.0">
+                                 <columns>
+                                    <TableColumn fx:id="totalAppointmentMonthColumn" prefWidth="269.0" text="Customer Appointments By Month" />
+                                    <TableColumn fx:id="monthTotalColumn" prefWidth="169.0" text="Total Amount" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+          <Tab fx:id="tabContactSchedule" text="Appointment Schedule For Contacts">
+               <content>
+                  <AnchorPane prefHeight="367.0" prefWidth="1061.0">
+                     <children>
+                        <AnchorPane layoutX="-61.0" layoutY="1.0" prefHeight="365.0" prefWidth="1110.0">
+                           <children>
+                              <ComboBox fx:id="appointmentScheduleContactComboBox" layoutX="243.0" layoutY="16.0" prefHeight="43.0" prefWidth="289.0" />
+                              <Text fx:id="selectContact" fill="#fffafa" layoutX="68.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-header" text="Select Contact:" wrappingWidth="227.2734375" />
+                              <TableView fx:id="appointmentsReportTableView" layoutX="62.0" layoutY="88.0" prefHeight="264.0" prefWidth="1012.0">
+                                 <columns>
+                                    <TableColumn fx:id="appointmentIDColumn" prefWidth="132.0" text="Appointment ID" />
+                                    <TableColumn fx:id="titleColumn" prefWidth="84.0" text="Title" />
+                                    <TableColumn fx:id="typeColumn" prefWidth="71.0" text="Type" />
+                                    <TableColumn fx:id="descriptionColumn" prefWidth="144.0" text="Description" />
+                                    <TableColumn fx:id="contactColumn" prefWidth="92.0" text="Contact" />
+                                    <TableColumn fx:id="contactIDColumn" prefWidth="93.0" text="Contact ID" />
+                                    <TableColumn fx:id="startDateTimeColumn" prefWidth="145.0" text="Start Date + Time" />
+                                    <TableColumn fx:id="endDateTimeColumn" prefWidth="139.0" text="End Date + Time" />
+                                    <TableColumn fx:id="customerIDColumn" prefWidth="107.0" text="Customer ID" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="reportCountryDivisionTab" onSelectionChanged="#customReportClicked" text="Customer By Country + Division">
+               <content>
+                  <AnchorPane prefHeight="363.0" prefWidth="993.0">
+                     <children>
+                        <AnchorPane prefHeight="363.0" prefWidth="903.0">
+                           <children>
+                              <TableView fx:id="reportCountryDivisionTable" layoutX="62.0" layoutY="55.0" prefHeight="253.0" prefWidth="780.0">
+                                 <columns>
+                                    <TableColumn fx:id="reportCountryNameColumn" prefWidth="270.0" text="Name Of Country" />
+                                    <TableColumn fx:id="reportDivisionColumn" minWidth="0.0" prefWidth="308.0" text="Division" />
+                                    <TableColumn fx:id="reportTotalDivisionColumn" prefWidth="200.0" text="Total Amount" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
